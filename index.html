@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alonso · Automatizaciones</title>
+  <meta name="description" content="Portafolio de proyectos de automatización y mejora de procesos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="#inicio" id="brand">Alonso<span>.</span></a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#sobre-mi" class="opt">Sobre mí</a>
+        <a href="#experiencia" class="opt">Experiencia</a>
+        <a href="#habilidades" class="opt">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#formacion" class="opt">Formación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-id">
+          <span class="status" id="disponible">Disponible para nuevos proyectos</span>
+          <h1 class="name" id="nombre"></h1>
+          <p class="role" id="rol-hero"></p>
+          <p class="place" id="lugar"></p>
+          <div class="social" id="redes" aria-label="Redes"></div>
+          <p class="intro" id="intro"></p>
+          <div class="cta">
+            <a class="btn" href="#proyectos">Ver proyectos</a>
+            <a class="btn ghost" id="cv" href="#" target="_blank" rel="noopener" hidden>Descargar CV</a>
+          </div>
+        </div>
+        <figure class="portrait" id="foto"></figure>
+      </div>
+    </section>
+
+    <section id="sobre-mi">
+      <div class="wrap about">
+        <div class="about-text">
+          <span class="eyebrow">Sobre mí</span>
+          <h2 class="titular" id="titular"></h2>
+          <div id="sobre" style="display: grid; gap: 14px"></div>
+          <div class="diagram" aria-label="Ejemplo de proceso antes y después de automatizar">
+          <div class="lane">
+            <div class="lane-label"><span>Proceso manual</span><b>~4 min / caso</b></div>
+            <div class="nodes">
+              <span class="node manual">Abrir correo</span><span class="arrow">→</span>
+              <span class="node manual">Descargar</span><span class="arrow">→</span>
+              <span class="node manual">Copiar datos</span><span class="arrow">→</span>
+              <span class="node manual">Revisar</span><span class="arrow">→</span>
+              <span class="node manual">Pegar en Excel</span>
+            </div>
+          </div>
+          <div class="lane">
+            <div class="lane-label"><span>Proceso automatizado</span><b>~20 s / caso</b></div>
+            <div class="nodes">
+              <span class="node auto">Disparador</span><span class="arrow">→</span>
+              <span class="node auto">Extraer y validar</span><span class="arrow">→</span>
+              <span class="node auto">Registrar</span>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Método de trabajo</span>
+          <ol class="steps" id="metodo" style="margin-top: 14px"></ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Experiencia</span>
+          <h2>Experiencia laboral</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Habilidades</span>
+          <h2>Herramientas con las que automatizo</h2>
+        </div>
+        <div class="skills" id="skills"></div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Proyectos</span>
+          <h2>Automatizaciones</h2>
+          <p>Cada proyecto documenta el proceso de partida, el flujo automatizado y el impacto medido.</p>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filtrar por categoría"></div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section id="formacion">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Formación</span>
+          <h2>Educación, certificaciones y docencia</h2>
+        </div>
+        <div class="formacion">
+          <div class="block">
+            <h3 class="sub">Educación</h3>
+            <div id="educacion" class="edu"></div>
+            <h3 class="sub" style="margin-top: 28px">Docencia y liderazgo</h3>
+            <div id="docencia" class="edu"></div>
+          </div>
+          <div class="block">
+            <h3 class="sub">Certificaciones</h3>
+            <ul class="certs" id="certs"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="wrap contact">
+        <span class="eyebrow">Contacto</span>
+        <h2>¿Tienes un proceso que se repite cada semana?</h2>
+        <p style="color: var(--muted)">Cuéntame cómo funciona hoy y vemos si merece la pena automatizarlo.</p>
+        <div class="mail">
+          <code id="email"></code>
+          <button class="btn ghost" id="copy" type="button">Copiar correo</button>
+        </div>
+        <div class="links" id="social"></div>
+      </div>
+    </section>
+  </main>
+
+  <main id="detail" class="detail" hidden></main>
+
+  <footer>
+    <div class="wrap">
+      <span id="foot-name"></span>
+      <span id="foot-count"></span>
+    </div>
+  </footer>
+
+  <script src="data/perfil.js"></script>
+  <script src="data/proyectos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
