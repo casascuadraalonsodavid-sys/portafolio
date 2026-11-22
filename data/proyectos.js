@@ -18,6 +18,24 @@
 
 window.PROYECTOS = [
   {
+    id: "bot-negocios-google-maps",
+    titulo: "Bot de prospección de negocios en Google Maps",
+    resumen: "Escribes en lenguaje natural qué negocios buscas y el bot deja la lista en Google Sheets, sin duplicados y con cada prospecto calificado por Claude.",
+    categoria: "Integraciones",
+    estado: "En desarrollo",
+    stack: ["Google Apps Script", "Google Places API", "Google Sheets", "Claude API"],
+    problema: "Armar una base de prospectos era manual: buscar en Google Maps, abrir ficha por ficha y copiar nombre, teléfono y web a una hoja. Unos 2 minutos por negocio, con duplicados, datos mal copiados y sin un criterio uniforme para decidir a quién contactar primero.",
+    solucion: "Un menú dentro del propio Google Sheet recibe el pedido en lenguaje natural. Claude lo convierte en consultas y filtros, la API oficial de Google Places trae los negocios y el script los escribe en la hoja, eliminando duplicados por Place ID. Luego Claude califica cada negocio como prospecto (Alta, Media o Baja) según el cliente ideal descrito, y cada búsqueda queda registrada en un historial.",
+    flujo: ["Pedido en lenguaje natural", "Claude arma el plan de búsqueda", "Búsqueda en Google Places", "Filtro y deduplicación", "Registro en Google Sheets", "Calificación de prospectos con Claude"],
+    metricas: [
+      { etiqueta: "100 prospectos", antes: "~3 h", despues: "< 2 min" },
+      { etiqueta: "Tiempo por negocio", antes: "~2 min", despues: "segundos" },
+      { etiqueta: "Duplicados", antes: "frecuentes", despues: "0" }
+    ],
+    enlaces: { repo: "https://github.com/casascuadraalonsodavid-sys/portafolio/tree/main/automatizaciones/bot-negocios-google-maps", demo: "", video: "" },
+    fecha: "2026-11"
+  },
+  {
     id: "facturas-proveedores",
     titulo: "Registro automático de facturas de proveedores",
     resumen: "Lee las facturas PDF que llegan por correo, extrae los datos clave y los registra en una hoja de control sin intervención manual.",
